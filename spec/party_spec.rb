@@ -25,7 +25,9 @@ describe Party do
       @party.name.should eq "Noah's Party"
     end
 
-    it "plays "
+    it "holds music objects" do
+      @music.first.should be_a_kind_of Music
+    end
 
   end
 
