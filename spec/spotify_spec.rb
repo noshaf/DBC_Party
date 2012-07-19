@@ -12,4 +12,8 @@ describe Spotify do
       call("Usher").first.should eq "Without You - feat. Usher"
     end
 
+    it "gets the spotify track id for each song"
+
+  end
+
 end

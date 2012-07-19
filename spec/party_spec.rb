@@ -8,25 +8,13 @@ describe Party do
   describe '#initialize' do
 
     before :each do
-      @party = Party.new("test_music", "Noah's Party")
+      @party = Party.new("Noah's Party")
     end
 
-    it "takes two argument" do
+    it "takes an argument" do
       expect{
       @party
       }.should_not raise_error(ArgumentError)
-    end
-
-    it "takes a directory of mp3 files as the first argument" do
-      @party.music.first.split('.')[1].should eq 'mp3'
-    end
-
-    it "has a name as the second argument" do
-      @party.name.should eq "Noah's Party"
-    end
-
-    it "holds music objects" do
-      @music.first.should be_a_kind_of Music
     end
 
   end
