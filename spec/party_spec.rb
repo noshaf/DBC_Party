@@ -16,6 +16,10 @@ describe Party do
       @party
       }.should_not raise_error(ArgumentError)
     end
+    
+    it "has a name" do
+      @party.name.should eq "Noah's Party"
+    end
 
   end
 
