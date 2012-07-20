@@ -11,7 +11,7 @@ module Spotify
   private
 
   def get_songs
-    json_response["tracks"].map {|track| track["name"]}
+    json_response["tracks"].map {|track| [track["name"], track["href"]]}
   end
 
   def json_response
@@ -31,3 +31,4 @@ module Spotify
   end
 
 end
+

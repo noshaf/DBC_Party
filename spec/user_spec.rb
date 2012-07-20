@@ -20,19 +20,59 @@ describe User do
     end
     
   end
+end
   
-  context "#create_party" do
+describe Thrower do
+  
+  let(:thrower){Thrower.new("username")}
+  
+  context "#initialize" do
+    
+    it "has a username" do
+      thrower.name.should eq "username"
+    end
+    
+    it "inherits from User" do
+      Thrower.ancestors.should include User
+    end
+    
+  end
+  
+  context "#create party" do
     
     it "creates a party" do
-      user.create_party("Crazy Party").should be_a_kind_of Party
+      thrower.create_party("Crazy Party").should be_a_kind_of Party
     end
-    
+  
     it "creates a party with the corresct name" do
-      user.create_party("Crazy Party").name.should eq "Crazy Party"
+      thrower.create_party("Crazy Party").name.should eq "Crazy Party"
+    end
+  
+  end
+  
+end
+
+describe Goer do
+  
+  let(:goer){Goer.new("username")}
+  
+  context "#initialize" do
+    
+    it "has a username" do
+      goer.name.should eq "username"
     end
     
+    it "inherits from User" do
+      Goer.ancestors.should include User
+    end
     
+  end
+  
+  context "#join_party" do
+    
+    it "joins a party based on name" 
     
   end
   
 end
+  
